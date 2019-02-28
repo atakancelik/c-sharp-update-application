@@ -20,51 +20,51 @@ namespace Update_Example
 
         private void Update_Load(object sender, EventArgs e)
         {
-            string indirilecek = "Ornek Olarak Uygulamanızın Yeni Setup Dosyası"; //İndirilecek Dosya Adresi
-            string path = Application.LocalUserAppDataPath; //Kurulucak PATH örnek olarak : Appdata>Uygulamanız
-            string klasor = path + "\\";
-            string dosyaAdi = "Setup.exe"; //İndirilecek Dosyanın adı (Değiştirilebilir)
+            string downloadUrl = "https://example.com/file.exe"; //File url to download
+            string path = Application.LocalUserAppDataPath; //Installed PATH as an example: Appdata> Your application
+            string folder = path + "\\";
+            string filename = "Setup.exe"; //The name of the file to download (can be changed)
             try
             {
                 using (var client = new WebClient())
                 {
-                    client.DownloadProgressChanged += wc_DownloadProgressChanged; //Progress bar için bilgi ve event args
-                    client.DownloadFileCompleted += wc_DownloadFileCompleted; // İndirme işlemi tamamlandığında olacak işlemler için event args
-                    client.DownloadFileAsync(new Uri(indirilecek), klasor + dosyaAdi); // Dosya indirme işlemi
+                    client.DownloadProgressChanged += wc_DownloadProgressChanged; //Information and event args for progress bar
+                    client.DownloadFileCompleted += wc_DownloadFileCompleted; // Event args for transactions that will be completed when the download is complete
+                    client.DownloadFileAsync(new Uri(downloadUrl), folder + filename); // File download process
                 }
 
             }
             catch
             {
-                MessageBox.Show("Güncelleme Sırasında Bir Hata Oluştu.");
+                MessageBox.Show("Error.");
             }
         }
         private void wc_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
         {
-            progressBar1.Value = e.ProgressPercentage; // Progress bar yüzdesi belirleme
+            progressBar1.Value = e.ProgressPercentage; // Set progress bar percentage
         }
 
         private void wc_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
         {
             progressBar1.Value = 0;
 
-            if (e.Cancelled) //İptal edildiğinde
+            if (e.Cancelled) //Cancelled
             {
-                MessageBox.Show("İndirme İşlemi İptal Edildi.");
+                MessageBox.Show("Cancelled.");
                 return;
             }
 
-            if (e.Error != null) //Herhangi bir hata oluştuğunda
+            if (e.Error != null) //When any error occurs
             {
-                MessageBox.Show("BELSAN Güncellenirken Bir Hata Oluştu.");
+                MessageBox.Show("Error.");
 
                 return;
             }
             string path = Application.LocalUserAppDataPath;
-            string klasor = path + "\\";
-            string dosyaAdi = "Setup.exe";
-            System.Diagnostics.Process.Start(klasor + dosyaAdi); //İndirdiğimiz dosyayı başlatma
-            Application.Exit(); //Şuan açık olan uygulamayı kapatma
+            string folder = path + "\\";
+            string filename = "Setup.exe";
+            System.Diagnostics.Process.Start(folder + filename); //Start the file we downloaded
+            Application.Exit(); //Close the currently open application
         }
 
     }

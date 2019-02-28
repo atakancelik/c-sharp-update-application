@@ -7,3 +7,4 @@ C:\Users\Atakan\Desktop\Update_Example\Update_Example\obj\Debug\Update_Example.c
 C:\Users\Atakan\Desktop\Update_Example\Update_Example\obj\Debug\Update_Example.csproj.CoreCompileInputs.cache
 C:\Users\Atakan\Desktop\Update_Example\Update_Example\obj\Debug\Update_Example.exe
 C:\Users\Atakan\Desktop\Update_Example\Update_Example\obj\Debug\Update_Example.pdb
+C:\Users\Atakan\Desktop\Update_Example\Update_Example\obj\Debug\Update_Example.csprojAssemblyReference.cache
