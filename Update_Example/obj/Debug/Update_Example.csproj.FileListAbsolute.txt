@@ -1,0 +1,9 @@
+C:\Users\Atakan\Desktop\Update_Example\Update_Example\bin\Debug\Update_Example.exe.config
+C:\Users\Atakan\Desktop\Update_Example\Update_Example\bin\Debug\Update_Example.exe
+C:\Users\Atakan\Desktop\Update_Example\Update_Example\bin\Debug\Update_Example.pdb
+C:\Users\Atakan\Desktop\Update_Example\Update_Example\obj\Debug\Update_Example.Properties.Resources.resources
+C:\Users\Atakan\Desktop\Update_Example\Update_Example\obj\Debug\Update_Example.Update.resources
+C:\Users\Atakan\Desktop\Update_Example\Update_Example\obj\Debug\Update_Example.csproj.GenerateResource.cache
+C:\Users\Atakan\Desktop\Update_Example\Update_Example\obj\Debug\Update_Example.csproj.CoreCompileInputs.cache
+C:\Users\Atakan\Desktop\Update_Example\Update_Example\obj\Debug\Update_Example.exe
+C:\Users\Atakan\Desktop\Update_Example\Update_Example\obj\Debug\Update_Example.pdb
